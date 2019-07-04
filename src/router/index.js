@@ -79,20 +79,48 @@ export const constantRoutes = [
         path: 'dashboard',
         component: () => import('@/views/dashboard/index'),
         name: 'Dashboard',
-        meta: { title: 'Dashboard', icon: 'dashboard', affix: true }
+        meta: { title: '首页', icon: 'dashboard', affix: true }
       }
     ]
   },
   {
-    path: '/CWEA',
+    path: '/',
     component: Layout,
-    redirect: '',
+    redirect: '/permission/page',
+    alwaysShow: true, // will always show the root menu
+    name: 'Permission',
+    meta: {
+      title: 'CWEA',
+      icon: 'lock'
+    },
     children: [
       {
-        path: 'dashboard',
+        path: 'page',
         component: () => import('@/views/joinergy/index'),
-        name: 'CWEA',
-        meta: { title: 'CWEA', icon: 'dashboard', affix: true }
+        name: 'PagePermission',
+        meta: {
+          title: '发展概况',
+          icon: 'chart'
+        }
+      },
+      {
+        path: 'directive',
+        component: () => import('@/views/cwea_2/index'),
+        name: 'DirectivePermission',
+        meta: {
+          title: '企业主体',
+          icon: 'chart'
+          // if do not set roles, means: this page does not require permission
+        }
+      },
+      {
+        path: 'role',
+        component: () => import('@/views/cwea_3/index'),
+        name: 'RolePermission',
+        meta: {
+          title: '项目挖掘',
+          icon: 'chart'
+        }
       }
     ]
   },
@@ -105,7 +133,7 @@ export const constantRoutes = [
         path: 'dashboard',
         component: () => import('@/views/plotly/index'),
         name: 'Joinergy',
-        meta: { title: 'Joinergy', icon: 'dashboard', affix: true }
+        meta: { title: '时间序列', icon: 'dashboard', affix: true }
       }
     ]
   }

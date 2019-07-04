@@ -30,7 +30,7 @@ export default {
     },
     chartData: {
       type: Object,
-      required: true
+      required: false
     }
   },
   data() {
@@ -59,7 +59,7 @@ export default {
             data: ['2002-01-01', '2003-01-01', '2004-01-01']
           },
           title: {
-            text: '新增装机容量',
+            text: '风电装机市场力指数',
             subtext: 'CWEA'
           },
           dataRange: {

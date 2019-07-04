@@ -3,6 +3,7 @@
 
     <el-row :gutter="32">
       <el-col :xs="24" :sm="24" :lg="12">
+        <h1>3333333</h1>
         <div class="chart-wrapper">
           <line-chart :chart-data="lineChartData" />
         </div>
