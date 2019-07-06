@@ -3,12 +3,11 @@
 
     <el-row :gutter="32">
       <el-col :xs="24" :sm="24" :lg="12">
-        <h1>3333333</h1>
+        <h1>资讯模块与数字化产品</h1>
         <div class="chart-wrapper">
           <line-chart :chart-data="lineChartData" />
         </div>
       </el-col>
-
     </el-row>
     <el-row :gutter="32">
       <el-col :xs="24" :sm="24" :lg="16">
@@ -43,8 +42,10 @@
         </div>
       </el-col>
     </el-row>
-
+    <img src="@/suzhou_temp.png">
+    <iframe src="https://www.jiaonengwang.com/EVdaily.html"   frameborder="0" scrolling="auto" width="100%" height="1000px;" onload="document.all['myframe'].style.width=myframe.document.body.scrollWidth" ></iframe>
   </div>
+
 </template>
 
 <script>

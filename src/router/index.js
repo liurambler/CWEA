@@ -99,7 +99,7 @@ export const constantRoutes = [
         component: () => import('@/views/joinergy/index'),
         name: 'PagePermission',
         meta: {
-          title: '发展概况',
+          title: '市场概况',
           icon: 'chart'
         }
       },
@@ -108,7 +108,7 @@ export const constantRoutes = [
         component: () => import('@/views/cwea_2/index'),
         name: 'DirectivePermission',
         meta: {
-          title: '企业主体',
+          title: '产业指数',
           icon: 'chart'
           // if do not set roles, means: this page does not require permission
         }
@@ -118,7 +118,7 @@ export const constantRoutes = [
         component: () => import('@/views/cwea_3/index'),
         name: 'RolePermission',
         meta: {
-          title: '项目挖掘',
+          title: '项目挖掘与资讯模块',
           icon: 'chart'
         }
       }
@@ -133,7 +133,7 @@ export const constantRoutes = [
         path: 'dashboard',
         component: () => import('@/views/plotly/index'),
         name: 'Joinergy',
-        meta: { title: '时间序列', icon: 'dashboard', affix: true }
+        meta: { title: '数据分析 - 时间序列', icon: 'guide', affix: true }
       }
     ]
   }

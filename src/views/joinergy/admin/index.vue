@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-editor-container">
-
+    <h1>数字化风能产业地图</h1>
     <el-row :gutter="32">
       <el-col :xs="24" :sm="24" :lg="12">
         <div class="chart-wrapper">
