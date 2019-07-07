@@ -54,168 +54,147 @@ export default {
     initChart() {
       this.chart = echarts.init(this.$el, 'macarons')
       this.chart.setOption({
-        baseOption: {
-          timeline: {
-            data: ['2002-01-01', '2003-01-01', '2004-01-01']
-          },
-          title: {
-            text: '新增装机容量',
-            subtext: 'CWEA'
-          },
-          dataRange: {
-            orient: 'vertical',
-            min: 0,
-            max: 55000,
-            text: ['高', '低'], // 文本，默认为数值文本
-            splitNumber: 0
-          },
-          series: [
-            {
-              type: 'map',
-              mapType: 'china',
-              selectedMode : 'multiple',
-              itemStyle: {
-                normal: { 
-                  label: { show: true },
-                  borderColor: '#009fe8',
-                  },
-                emphasis: { 
-                  label: { show: true },
-                  borderColor: '#009fe8',
-                  }
-              }
-
-            }
-          ]
+            title : {
+        text: '项目进展全国分布',
+        subtext: '虚构数据',
+        left: 'center'
+    },
+    tooltip : {
+        trigger: 'item'
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+        data:['阶段1','阶段2','阶段3']
+    },
+    visualMap: {
+        min: 0,
+        max: 2500,
+        left: 'left',
+        top: 'bottom',
+        text:['高','低'],           // 文本，默认为数值文本
+        calculable : true
+    },
+    toolbox: {
+        show: true,
+        orient : 'vertical',
+        left: 'right',
+        top: 'center',
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    series : [
+        {
+            name: '阶段1',
+            type: 'map',
+            mapType: 'china',
+            roam: false,
+            label: {
+                normal: {
+                    show: false
+                },
+                emphasis: {
+                    show: true
+                }
+            },
+            data:[
+                {name: '北京',value: Math.round(Math.random()*1000)},
+                {name: '天津',value: Math.round(Math.random()*1000)},
+                {name: '上海',value: Math.round(Math.random()*1000)},
+                {name: '重庆',value: Math.round(Math.random()*1000)},
+                {name: '河北',value: Math.round(Math.random()*1000)},
+                {name: '河南',value: Math.round(Math.random()*1000)},
+                {name: '云南',value: Math.round(Math.random()*1000)},
+                {name: '辽宁',value: Math.round(Math.random()*1000)},
+                {name: '黑龙江',value: Math.round(Math.random()*1000)},
+                {name: '湖南',value: Math.round(Math.random()*1000)},
+                {name: '安徽',value: Math.round(Math.random()*1000)},
+                {name: '山东',value: Math.round(Math.random()*1000)},
+                {name: '新疆',value: Math.round(Math.random()*1000)},
+                {name: '江苏',value: Math.round(Math.random()*1000)},
+                {name: '浙江',value: Math.round(Math.random()*1000)},
+                {name: '江西',value: Math.round(Math.random()*1000)},
+                {name: '湖北',value: Math.round(Math.random()*1000)},
+                {name: '广西',value: Math.round(Math.random()*1000)},
+                {name: '甘肃',value: Math.round(Math.random()*1000)},
+                {name: '山西',value: Math.round(Math.random()*1000)},
+                {name: '内蒙古',value: Math.round(Math.random()*1000)},
+                {name: '陕西',value: Math.round(Math.random()*1000)},
+                {name: '吉林',value: Math.round(Math.random()*1000)},
+                {name: '福建',value: Math.round(Math.random()*1000)},
+                {name: '贵州',value: Math.round(Math.random()*1000)},
+                {name: '广东',value: Math.round(Math.random()*1000)},
+                {name: '青海',value: Math.round(Math.random()*1000)},
+                {name: '西藏',value: Math.round(Math.random()*1000)},
+                {name: '四川',value: Math.round(Math.random()*1000)},
+                {name: '宁夏',value: Math.round(Math.random()*1000)},
+                {name: '海南',value: Math.round(Math.random()*1000)},
+                {name: '台湾',value: Math.round(Math.random()*1000)},
+                {name: '香港',value: Math.round(Math.random()*1000)},
+                {name: '澳门',value: Math.round(Math.random()*1000)}
+            ]
         },
-        options: [
-          {
-            title: {
-              subtext: '2011'
+        {
+            name: '阶段2',
+            type: 'map',
+            mapType: 'china',
+            label: {
+                normal: {
+                    show: false
+                },
+                emphasis: {
+                    show: true
+                }
             },
-            series: [
-              {
-                data: [
-                  { name: '西藏', value: 605.83 },
-                  { name: '青海', value: 1670.44 },
-                  { name: '宁夏', value: 2102.21 },
-                  { name: '海南', value: 2522.66 },
-                  { name: '甘肃', value: 5020.37 },
-                  { name: '贵州', value: 5701.84 },
-                  { name: '新疆', value: 6610.05 },
-                  { name: '云南', value: 8893.12 },
-                  { name: '重庆', value: 10011.37 },
-                  { name: '吉林', value: 10568.83 },
-                  { name: '山西', value: 11237.55 },
-                  { name: '天津', value: 11307.28 },
-                  { name: '江西', value: 11702.82 },
-                  { name: '广西', value: 11720.87 },
-                  { name: '陕西', value: 12512.3 },
-                  { name: '黑龙江', value: 12582 },
-                  { name: '内蒙古', value: 14359.88 },
-                  { name: '安徽', value: 15300.65 },
-                  { name: '北京', value: 16251.93 },
-                  { name: '福建', value: 17560.18 },
-                  { name: '上海', value: 19195.69 },
-                  { name: '湖北', value: 19632.26 },
-                  { name: '湖南', value: 19669.56 },
-                  { name: '四川', value: 21026.68 },
-                  { name: '辽宁', value: 22226.7 },
-                  { name: '河北', value: 24515.76 },
-                  { name: '河南', value: 26931.03 },
-                  { name: '浙江', value: 32318.85 },
-                  { name: '山东', value: 45361.85 },
-                  { name: '江苏', value: 49110.27 },
-                  { name: '广东', value: 53210.28 }
-                ]
-              }
+            data:[
+                {name: '北京',value: Math.round(Math.random()*1000)},
+                {name: '天津',value: Math.round(Math.random()*1000)},
+                {name: '上海',value: Math.round(Math.random()*1000)},
+                {name: '重庆',value: Math.round(Math.random()*1000)},
+                {name: '河北',value: Math.round(Math.random()*1000)},
+                {name: '安徽',value: Math.round(Math.random()*1000)},
+                {name: '新疆',value: Math.round(Math.random()*1000)},
+                {name: '浙江',value: Math.round(Math.random()*1000)},
+                {name: '江西',value: Math.round(Math.random()*1000)},
+                {name: '山西',value: Math.round(Math.random()*1000)},
+                {name: '内蒙古',value: Math.round(Math.random()*1000)},
+                {name: '吉林',value: Math.round(Math.random()*1000)},
+                {name: '福建',value: Math.round(Math.random()*1000)},
+                {name: '广东',value: Math.round(Math.random()*1000)},
+                {name: '西藏',value: Math.round(Math.random()*1000)},
+                {name: '四川',value: Math.round(Math.random()*1000)},
+                {name: '宁夏',value: Math.round(Math.random()*1000)},
+                {name: '香港',value: Math.round(Math.random()*1000)},
+                {name: '澳门',value: Math.round(Math.random()*1000)}
             ]
-          },
-          {
-            title: {
-              subtext: '2012'
+        },
+        {
+            name: '阶段3',
+            type: 'map',
+            mapType: 'china',
+            label: {
+                normal: {
+                    show: false
+                },
+                emphasis: {
+                    show: true
+                }
             },
-            series: [
-              {
-                data: [
-                  { name: '西藏', value: 605.83 },
-                  { name: '青海', value: 1670.44 },
-                  { name: '宁夏', value: 2102.21 },
-                  { name: '海南', value: 2522.66 },
-                  { name: '甘肃', value: 5020.37 },
-                  { name: '贵州', value: 5701.84 },
-                  { name: '新疆', value: 6610.05 },
-                  { name: '云南', value: 8893.12 },
-                  { name: '重庆', value: 10011.37 },
-                  { name: '吉林', value: 10568.83 },
-                  { name: '山西', value: 11237.55 },
-                  { name: '天津', value: 11307.28 },
-                  { name: '江西', value: 11702.82 },
-                  { name: '广西', value: 11720.87 },
-                  { name: '陕西', value: 12512.3 },
-                  { name: '黑龙江', value: 12582 },
-                  { name: '内蒙古', value: 14359.88 },
-                  { name: '安徽', value: 15300.65 },
-                  { name: '北京', value: 16251.93},
-                  { name: '福建', value: 17560.18 },
-                  { name: '上海', value: 19195.69 },
-                  { name: '湖北', value: 19632.26 },
-                  { name: '湖南', value: 19669.56 },
-                  { name: '四川', value: 21026.68 },
-                  { name: '辽宁', value: 22226.7 },
-                  { name: '河北', value: 24515.76 },
-                  { name: '河南', value: 26931.03 },
-                  { name: '浙江', value: 32318.85 },
-                  { name: '山东', value: 45361.85 },
-                  { name: '江苏', value: 49110.27 },
-                  { name: '广东', value: 53210.28 }
-                ]
-              }
+            data:[
+                {name: '北京',value: Math.round(Math.random()*1000)},
+                {name: '天津',value: Math.round(Math.random()*1000)},
+                {name: '上海',value: Math.round(Math.random()*1000)},
+                {name: '广东',value: Math.round(Math.random()*1000)},
+                {name: '台湾',value: Math.round(Math.random()*1000)},
+                {name: '香港',value: Math.round(Math.random()*1000)},
+                {name: '澳门',value: Math.round(Math.random()*1000)}
             ]
-          },
-          {
-            title: {
-              subtext: '2013'
-            },
-            series: [
-              {
-                data: [
-                  { name: '西藏', value: 605.83 },
-                  { name: '青海', value: 1670.44 },
-                  { name: '宁夏', value: 2102.21 },
-                  { name: '海南', value: 2522.66 },
-                  { name: '甘肃', value: 5020.37 },
-                  { name: '贵州', value: 5701.84 },
-                  { name: '新疆', value: 6610.05 },
-                  { name: '云南', value: 8893.12 },
-                  { name: '重庆', value: 10011.37 },
-                  { name: '吉林', value: 10568.83 },
-                  { name: '山西', value: 11237.55 },
-                  { name: '天津', value: 11307.28 },
-                  { name: '江西', value: 11702.82 },
-                  { name: '广西', value: 11720.87 },
-                  { name: '陕西', value: 12512.3 },
-                  { name: '黑龙江', value: 12582 },
-                  { name: '内蒙古', value: 14359.88 },
-                  { name: '安徽', value: 15300.65 },
-                  { name: '北京', value: 16251.93 },
-                  { name: '福建', value: 17560.18 },
-                  { name: '上海', value: 19195.69 },
-                  { name: '湖北', value: 19632.26 },
-                  { name: '湖南', value: 19669.56 },
-                  { name: '四川', value: 21026.68 },
-                  { name: '辽宁', value: 22226.7 },
-                  { name: '河北', value: 24515.76 },
-                  { name: '河南', value: 26931.03 },
-                  { name: '浙江', value: 32318.85 },
-                  { name: '山东', value: 45361.85 },
-                  { name: '江苏', value: 49110.27 },
-                  { name: '广东', value: 53210.28}
-                ]
-              }
-            ]
-          }
-        ]
+        }
+    ]
       })
     }
   }

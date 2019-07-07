@@ -20,7 +20,7 @@ export default {
     },
     height: {
       type: String,
-      default: '300px'
+      default: '400px'
     }
   },
   data() {
@@ -52,7 +52,7 @@ export default {
         legend: {
           left: 'center',
           bottom: '10',
-          data: ['I', 'II', 'III', 'IV']
+          data: ['I阶段1', '阶段2', '阶段3']
         },
         series: [
           {
@@ -62,10 +62,9 @@ export default {
             radius: [15, 95],
             center: ['50%', '38%'],
             data: [
-              { value: 2948.7, name: 'I' },
-              { value: 7226, name: 'II' },
-              { value: 4559, name: 'III' },
-              { value: 12957.25, name: 'IV' }
+              { value: 2948, name: '阶段1' },
+              { value: 3226, name: '阶段2' },
+              { value: 4559, name: '阶段3' }
             ],
             animationEasing: 'cubicInOut',
             animationDuration: 2600

@@ -2,46 +2,19 @@
   <div class="dashboard-editor-container">
 
     <el-row :gutter="32">
-      <el-col :xs="24" :sm="24" :lg="12">
-        <h1>资讯模块与数字化产品</h1>
+      <el-col :xs="24" :sm="24" :lg="16">
         <div class="chart-wrapper">
           <line-chart :chart-data="lineChartData" />
         </div>
       </el-col>
-    </el-row>
-    <el-row :gutter="32">
-      <el-col :xs="24" :sm="24" :lg="16">
-        <div class="chart-wrapper">
-          <area-dev/>
-        </div>
-      </el-col>
-    </el-row>
-
-    <el-row :gutter="32">
       <el-col :xs="24" :sm="24" :lg="8">
         <div class="chart-wrapper">
           <pie-chart />
         </div>
       </el-col>
-      <el-col :xs="24" :sm="24" :lg="16">
-        <div class="chart-wrapper">
-          <bar-chart />
-        </div>
-      </el-col>
     </el-row>
 
-    <el-row :gutter="32" style="">
-      <el-col :xs="24" :sm="24" :lg="12">
-        <div class="chart-wrapper">
-          <div id="myDiv2" style="width:90%;height:400px;margin:auto;" />
-        </div>
-      </el-col>
-      <el-col :xs="24" :sm="24" :lg="12">
-        <div class="chart-wrapper">
-          <div id="myDiv3" style="width:90%;height:400px;margin:auto;" />
-        </div>
-      </el-col>
-    </el-row>
+
     <img src="@/suzhou_temp.png">
     <iframe src="https://www.jiaonengwang.com/EVdaily.html"   frameborder="0" scrolling="auto" width="100%" height="1000px;" onload="document.all['myframe'].style.width=myframe.document.body.scrollWidth" ></iframe>
   </div>

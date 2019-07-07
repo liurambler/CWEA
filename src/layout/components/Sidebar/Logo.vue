@@ -24,7 +24,7 @@ export default {
   },
   data() {
     return {
-      title: 'CDAW数据平台',
+      title: 'CWEA数据平台',
       logo: 'http://www.cwea.org.cn/images/index-logo.png'
     }
   }
