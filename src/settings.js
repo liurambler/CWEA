@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'CWEA',
+  title: 'CWEA 数字化平台',
 
   /**
    * @type {boolean} true | false

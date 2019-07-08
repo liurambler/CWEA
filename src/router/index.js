@@ -90,7 +90,7 @@ export const constantRoutes = [
     alwaysShow: true, // will always show the root menu
     name: 'Permission',
     meta: {
-      title: 'CWEA',
+      title: 'CWEA 数据产品',
       icon: 'lock'
     },
     children: [
@@ -108,7 +108,7 @@ export const constantRoutes = [
         component: () => import('@/views/cwea_2/index'),
         name: 'DirectivePermission',
         meta: {
-          title: '产业指数',
+          title: '风能产业指数',
           icon: 'chart'
           // if do not set roles, means: this page does not require permission
         }

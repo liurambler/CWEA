@@ -56,7 +56,7 @@ export default {
       this.chart.setOption({
         baseOption: {
           timeline: {
-            data: ['2002-01-01', '2003-01-01', '2004-01-01']
+            data: ['2011-01-01', '2012-01-01', '2013-01-01']
           },
           title: {
             text: '风电装机市场力指数',
@@ -81,14 +81,12 @@ export default {
               mapType: 'china',
               selectedMode : 'multiple',
               itemStyle: {
-                normal: { 
+                normal: {
                   label: { show: false },
-                  borderColor: '#fff',
-                  },
-                emphasis: { 
+                  borderColor: '#fff', },
+                emphasis: {
                   label: { show: true },
-                  borderColor: '#ddd',
-                  }
+                  borderColor: '#ddd', }
               },
             }
           ]
@@ -184,8 +182,7 @@ export default {
                 }, {
                   name: '\u5e7f\u897f',
                   value: 10000
-                }]
-                }
+                }]}
             ]
           },
           {

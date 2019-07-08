@@ -40,11 +40,11 @@
 
     <div class="tab-container">
       <el-tabs v-model="activeName" style="margin-top:15px;" type="border-card">
-        <el-tab-pane key="CWEA" label="CWEA" name="CWEA">
+        <el-tab-pane key="CWEA" label="JN" name="CWEA">
           CWEA
         </el-tab-pane>
-        <el-tab-pane key="JN" label="Plotly" name="JN">
-          JN
+        <el-tab-pane key="JN" label="CWEA" name="JN">
+          欢迎访问数据平台！
         </el-tab-pane>
       </el-tabs>
     </div>
