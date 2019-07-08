@@ -1,5 +1,5 @@
 <template>
-  <div :class="className" :style="{height:height,width:width}" />
+  <div :class='className' :style='{height:height,width:width}' />
 </template>
 
 <script>
@@ -60,13 +60,19 @@ export default {
           },
           title: {
             text: '风电装机市场力指数',
-            subtext: 'CWEA'
+            subtext: 'CWEA',
+            left: 'center'
+
+          },
+          tooltip : {
+            trigger: 'item',
+            formatter: '{b} : {c}'
           },
           dataRange: {
             orient: 'vertical',
             min: 0,
-            max: 55000,
-            text: ['高', '低'], // 文本，默认为数值文本
+            max: 10000,
+            text: ['10000', '0'], // 文本，默认为数值文本
             splitNumber: 0
           },
           series: [
@@ -76,15 +82,14 @@ export default {
               selectedMode : 'multiple',
               itemStyle: {
                 normal: { 
-                  label: { show: true },
-                  borderColor: '#009fe8',
+                  label: { show: false },
+                  borderColor: '#fff',
                   },
                 emphasis: { 
                   label: { show: true },
-                  borderColor: '#009fe8',
+                  borderColor: '#ddd',
                   }
-              }
-
+              },
             }
           ]
         },
@@ -95,40 +100,92 @@ export default {
             },
             series: [
               {
-                data: [
-                  { name: '西藏', value: 605.83 },
-                  { name: '青海', value: 1670.44 },
-                  { name: '宁夏', value: 2102.21 },
-                  { name: '海南', value: 2522.66 },
-                  { name: '甘肃', value: 5020.37 },
-                  { name: '贵州', value: 5701.84 },
-                  { name: '新疆', value: 6610.05 },
-                  { name: '云南', value: 8893.12 },
-                  { name: '重庆', value: 10011.37 },
-                  { name: '吉林', value: 10568.83 },
-                  { name: '山西', value: 11237.55 },
-                  { name: '天津', value: 11307.28 },
-                  { name: '江西', value: 11702.82 },
-                  { name: '广西', value: 11720.87 },
-                  { name: '陕西', value: 12512.3 },
-                  { name: '黑龙江', value: 12582 },
-                  { name: '内蒙古', value: 14359.88 },
-                  { name: '安徽', value: 15300.65 },
-                  { name: '北京', value: 16251.93 },
-                  { name: '福建', value: 17560.18 },
-                  { name: '上海', value: 19195.69 },
-                  { name: '湖北', value: 19632.26 },
-                  { name: '湖南', value: 19669.56 },
-                  { name: '四川', value: 21026.68 },
-                  { name: '辽宁', value: 22226.7 },
-                  { name: '河北', value: 24515.76 },
-                  { name: '河南', value: 26931.03 },
-                  { name: '浙江', value: 32318.85 },
-                  { name: '山东', value: 45361.85 },
-                  { name: '江苏', value: 49110.27 },
-                  { name: '广东', value: 53210.28 }
-                ]
-              }
+                data: [{
+                  name: '\u65b0\u7586',
+                  value: 1021
+                }, {
+                  name: '\u5409\u6797',
+                  value: 1108
+                }, {
+                  name: '\u5185\u8499\u53e4',
+                  value: 1287
+                }, {
+                  name: '\u5b81\u590f',
+                  value: 1641
+                }, {
+                  name: '\u9ed1\u9f99\u6c5f',
+                  value: 1711
+                }, {
+                  name: '\u8fbd\u5b81',
+                  value: 1751
+                }, {
+                  name: '\u7518\u8083',
+                  value: 2004
+                }, {
+                  name: '\u6cb3\u5317',
+                  value: 2007
+                }, {
+                  name: '\u5c71\u4e1c',
+                  value: 2370
+                }, {
+                  name: '\u5e7f\u4e1c',
+                  value: 2512
+                }, {
+                  name: '\u6cb3\u5357',
+                  value: 2656
+                }, {
+                  name: '\u9655\u897f',
+                  value: 2688
+                }, {
+                  name: '\u4e91\u5357',
+                  value: 2710
+                }, {
+                  name: '\u5c71\u897f',
+                  value: 3375
+                }, {
+                  name: '\u798f\u5efa',
+                  value: 3752
+                }, {
+                  name: '\u6c5f\u82cf',
+                  value: 5102
+                }, {
+                  name: '\u6e56\u5317',
+                  value: 6851
+                }, {
+                  name: '\u4e0a\u6d77',
+                  value: 7087
+                }, {
+                  name: '\u6d59\u6c5f',
+                  value: 7126
+                }, {
+                  name: '\u6e56\u5357',
+                  value: 7644
+                }, {
+                  name: '\u9752\u6d77',
+                  value: 8071
+                }, {
+                  name: '\u8d35\u5dde',
+                  value: 9516
+                }, {
+                  name: '\u5929\u6d25',
+                  value: 10000
+                }, {
+                  name: '\u5317\u4eac',
+                  value: 10000
+                }, {
+                  name: '\u6c5f\u897f',
+                  value: 10000
+                }, {
+                  name: '\u56db\u5ddd',
+                  value: 10000
+                }, {
+                  name: '\u5b89\u5fbd',
+                  value: 10000
+                }, {
+                  name: '\u5e7f\u897f',
+                  value: 10000
+                }]
+                }
             ]
           },
           {
@@ -137,39 +194,94 @@ export default {
             },
             series: [
               {
-                data: [
-                  { name: '西藏', value: 605.83 },
-                  { name: '青海', value: 1670.44 },
-                  { name: '宁夏', value: 2102.21 },
-                  { name: '海南', value: 2522.66 },
-                  { name: '甘肃', value: 5020.37 },
-                  { name: '贵州', value: 5701.84 },
-                  { name: '新疆', value: 6610.05 },
-                  { name: '云南', value: 8893.12 },
-                  { name: '重庆', value: 10011.37 },
-                  { name: '吉林', value: 10568.83 },
-                  { name: '山西', value: 11237.55 },
-                  { name: '天津', value: 11307.28 },
-                  { name: '江西', value: 11702.82 },
-                  { name: '广西', value: 11720.87 },
-                  { name: '陕西', value: 12512.3 },
-                  { name: '黑龙江', value: 12582 },
-                  { name: '内蒙古', value: 14359.88 },
-                  { name: '安徽', value: 15300.65 },
-                  { name: '北京', value: 16251.93},
-                  { name: '福建', value: 17560.18 },
-                  { name: '上海', value: 19195.69 },
-                  { name: '湖北', value: 19632.26 },
-                  { name: '湖南', value: 19669.56 },
-                  { name: '四川', value: 21026.68 },
-                  { name: '辽宁', value: 22226.7 },
-                  { name: '河北', value: 24515.76 },
-                  { name: '河南', value: 26931.03 },
-                  { name: '浙江', value: 32318.85 },
-                  { name: '山东', value: 45361.85 },
-                  { name: '江苏', value: 49110.27 },
-                  { name: '广东', value: 53210.28 }
-                ]
+                data: [{
+                  name: '\u65b0\u7586',
+                  value: 1066
+                }, {
+                  name: '\u7518\u8083',
+                  value: 1077
+                }, {
+                  name: '\u8fbd\u5b81',
+                  value: 1153
+                }, {
+                  name: '\u9ed1\u9f99\u6c5f',
+                  value: 1286
+                }, {
+                  name: '\u5185\u8499\u53e4',
+                  value: 1367
+                }, {
+                  name: '\u5b81\u590f',
+                  value: 1564
+                }, {
+                  name: '\u5e7f\u4e1c',
+                  value: 1773
+                }, {
+                  name: '\u6cb3\u5317',
+                  value: 1777
+                }, {
+                  name: '\u4e91\u5357',
+                  value: 2104
+                }, {
+                  name: '\u5409\u6797',
+                  value: 2149
+                }, {
+                  name: '\u6cb3\u5357',
+                  value: 2285
+                }, {
+                  name: '\u798f\u5efa',
+                  value: 2624
+                }, {
+                  name: '\u5c71\u897f',
+                  value: 2762
+                }, {
+                  name: '\u5c71\u4e1c',
+                  value: 2959
+                }, {
+                  name: '\u8d35\u5dde',
+                  value: 3474
+                }, {
+                  name: '\u5e7f\u897f',
+                  value: 3581
+                }, {
+                  name: '\u9752\u6d77',
+                  value: 3899
+                }, {
+                  name: '\u6d59\u6c5f',
+                  value: 4702
+                }, {
+                  name: '\u9655\u897f',
+                  value: 4839
+                }, {
+                  name: '\u91cd\u5e86',
+                  value: 5061
+                }, {
+                  name: '\u6c5f\u897f',
+                  value: 5102
+                }, {
+                  name: '\u6c5f\u82cf',
+                  value: 5712
+                }, {
+                  name: '\u6e56\u5357',
+                  value: 5917
+                }, {
+                  name: '\u5b89\u5fbd',
+                  value: 6314
+                }, {
+                  name: '\u4e0a\u6d77',
+                  value: 7923
+                }, {
+                  name: '\u5929\u6d25',
+                  value: 10000
+                }, {
+                  name: '\u6e56\u5317',
+                  value: 10000
+                }, {
+                  name: '\u56db\u5ddd',
+                  value: 10000
+                }, {
+                  name: '\u6d77\u5357',
+                  value: 10000
+                }]
               }
             ]
           },
@@ -179,39 +291,97 @@ export default {
             },
             series: [
               {
-                data: [
-                  { name: '西藏', value: 605.83 },
-                  { name: '青海', value: 1670.44 },
-                  { name: '宁夏', value: 2102.21 },
-                  { name: '海南', value: 2522.66 },
-                  { name: '甘肃', value: 5020.37 },
-                  { name: '贵州', value: 5701.84 },
-                  { name: '新疆', value: 6610.05 },
-                  { name: '云南', value: 8893.12 },
-                  { name: '重庆', value: 10011.37 },
-                  { name: '吉林', value: 10568.83 },
-                  { name: '山西', value: 11237.55 },
-                  { name: '天津', value: 11307.28 },
-                  { name: '江西', value: 11702.82 },
-                  { name: '广西', value: 11720.87 },
-                  { name: '陕西', value: 12512.3 },
-                  { name: '黑龙江', value: 12582 },
-                  { name: '内蒙古', value: 14359.88 },
-                  { name: '安徽', value: 15300.65 },
-                  { name: '北京', value: 16251.93 },
-                  { name: '福建', value: 17560.18 },
-                  { name: '上海', value: 19195.69 },
-                  { name: '湖北', value: 19632.26 },
-                  { name: '湖南', value: 19669.56 },
-                  { name: '四川', value: 21026.68 },
-                  { name: '辽宁', value: 22226.7 },
-                  { name: '河北', value: 24515.76 },
-                  { name: '河南', value: 26931.03 },
-                  { name: '浙江', value: 32318.85 },
-                  { name: '山东', value: 45361.85 },
-                  { name: '江苏', value: 49110.27 },
-                  { name: '广东', value: 53210.28}
-                ]
+                data: [{
+                  name: '\u65b0\u7586',
+                  value: 734.
+                }, {
+                  name: '\u8fbd\u5b81',
+                  value: 1175
+                }, {
+                  name: '\u5b81\u590f',
+                  value: 1260
+                }, {
+                  name: '\u5e7f\u4e1c',
+                  value: 1285
+                }, {
+                  name: '\u5c71\u897f',
+                  value: 1312
+                }, {
+                  name: '\u4e91\u5357',
+                  value: 1422
+                }, {
+                  name: '\u5c71\u4e1c',
+                  value: 1445
+                }, {
+                  name: '\u9ed1\u9f99\u6c5f',
+                  value: 1573
+                }, {
+                  name: '\u7518\u8083',
+                  value: 1605
+                }, {
+                  name: '\u6e56\u5357',
+                  value: 1688
+                }, {
+                  name: '\u5185\u8499\u53e4',
+                  value: 1873
+                }, {
+                  name: '\u6cb3\u5317',
+                  value: 1975
+                }, {
+                  name: '\u6e56\u5317',
+                  value: 2034
+                }, {
+                  name: '\u6d59\u6c5f',
+                  value: 2451
+                }, {
+                  name: '\u9752\u6d77',
+                  value: 2513
+                }, {
+                  name: '\u5409\u6797',
+                  value: 2567
+                }, {
+                  name: '\u8d35\u5dde',
+                  value: 2672
+                }, {
+                  name: '\u6c5f\u82cf',
+                  value: 2774
+                }, {
+                  name: '\u9655\u897f',
+                  value: 2783
+                }, {
+                  name: '\u798f\u5efa',
+                  value: 2863
+                }, {
+                  name: '\u6cb3\u5357',
+                  value: 3359
+                }, {
+                  name: '\u56db\u5ddd',
+                  value: 3510
+                }, {
+                  name: '\u5e7f\u897f',
+                  value: 4659
+                }, {
+                  name: '\u5b89\u5fbd',
+                  value: 5510
+                }, {
+                  name: '\u91cd\u5e86',
+                  value: 8423
+                }, {
+                  name: '\u5929\u6d25',
+                  value: 10000
+                }, {
+                  name: '\u5317\u4eac',
+                  value: 10000
+                }, {
+                  name: '\u6c5f\u897f',
+                  value: 10000
+                }, {
+                  name: '\u4e0a\u6d77',
+                  value: 10000
+                }, {
+                  name: '\u897f\u85cf',
+                  value: 10000
+                }]
               }
             ]
           }

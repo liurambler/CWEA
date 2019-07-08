@@ -1,20 +1,17 @@
 <template>
   <div class="dashboard-editor-container">
-<el-row>
-  <div class="chart-wrapper">
-    <entity />
-  </div>
-</el-row>
-<el-row :gutter="32">
-  <el-col :xs="24" :sm="24" :lg="16">
-    <div class="chart-wrapper">
-      <line-chart />
-    </div>
-  </el-col>
-</el-row>
-
-
-
+    <el-row :gutter="32">
+      <el-col :xs="24" :sm="24" :lg="24">
+        <div class="chart-wrapper">
+          <line-chart />
+        </div>
+      </el-col>
+    </el-row>
+    <el-row>
+      <div class="chart-wrapper">
+        <entity />
+      </div>
+    </el-row>
   </div>
 
 </template>

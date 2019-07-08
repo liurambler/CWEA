@@ -47,15 +47,8 @@ export default {
       this.chart = echarts.init(this.$el, 'macarons')
       
       var builderJson = {
-        "all": 10887,
+        "all": 10000,
         "charts": {
-          "\u5f00\u53d1\u554693": 0.0,
-          "\u5f00\u53d1\u554628": 0.0,
-          "\u5f00\u53d1\u554684": 0.0,
-          "\u5f00\u53d1\u554629": 0.0,
-          "\u5f00\u53d1\u554678": 0.0,
-          "\u5f00\u53d1\u554626": 0.0,
-          "\u5f00\u53d1\u554688": 0.0,
           "\u5f00\u53d1\u55461": 1442.0230333984932,
           "\u5f00\u53d1\u55464": 1490.4510804006427,
           "\u5f00\u53d1\u55467": 1519.9206495453502,
@@ -116,8 +109,6 @@ export default {
           "\u5f00\u53d1\u554619": 10000.0
         },
         "components": {
-          "\u5236\u9020\u4f01\u4e1a24": 0.0,
-          "\u5236\u9020\u4f01\u4e1a27": 0.0,
           "\u5236\u9020\u4f01\u4e1a1": 907.9475308641978,
           "\u5236\u9020\u4f01\u4e1a10": 1519.6016402937767,
           "\u5236\u9020\u4f01\u4e1a19": 1645.1446280991738,
@@ -170,8 +161,8 @@ export default {
       let option = {
         tooltip: {},
         title: [{
-          text: '主体市场力指数',
-          sub:'数值越低代表垄断力越高',
+          text: '市场集中度指数',
+          subtext:'数值越高代表其客户关系越单一',
           x: '25%',
           textAlign: 'center'
         }, {
@@ -222,7 +213,9 @@ export default {
           data: Object.keys(builderJson.charts),
           axisLabel: {
             interval: 0,
-            rotate: 30
+            rotate: 30,
+            fontSize: 8,
+            interval:1
           },
           splitLine: {
             show: false
@@ -233,7 +226,8 @@ export default {
           data: Object.keys(builderJson.components),
           axisLabel: {
             interval: 0,
-            rotate: 30
+            rotate: 30,
+            fontSize: 8
           },
           splitLine: {
             show: false
