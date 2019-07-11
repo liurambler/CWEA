@@ -1,13 +1,13 @@
 <template>
   <div class="dashboard-editor-container">
 
-    <el-row :gutter="32">
+    <!-- <el-row :gutter="32">
       <el-col :xs="24" :sm="24" :lg="24">
         <div class="chart-wrapper">
           <line-chart :chart-data="lineChartData" />
         </div>
       </el-col>
-    </el-row>
+    </el-row> -->
 
 
     <img src="@/suzhou_temp.png">

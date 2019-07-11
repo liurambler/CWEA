@@ -74,14 +74,22 @@ export default {
               type: 'map',
               mapType: 'china',
               selectedMode : 'multiple',
+                          label: {
+              normal: {
+                show: false
+              },
+              emphasis: {
+                show: true
+              }
+            },
               itemStyle: {
                 normal: { 
                   label: { show: true },
-                  borderColor: '#009fe8',
+                  borderColor: '#fff',
                   },
                 emphasis: { 
                   label: { show: true },
-                  borderColor: '#009fe8',
+                  borderColor: '#ddd',
                   }
               }
 
