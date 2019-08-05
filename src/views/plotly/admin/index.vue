@@ -22,7 +22,7 @@
     </el-row> -->
     <div class="filter-container">
       <div class="filter-item el-input el-input--medium" style="width: 200px;">
-        <!----><input type="text" autocomplete="off" placeholder="Title" class="el-input__inner">
+        <!----><input type="text" autocomplete="off" placeholder="名称" class="el-input__inner">
         <!---->
         <!---->
         <!---->
@@ -30,7 +30,7 @@
       <div class="el-select filter-item el-select--medium" style="width: 90px;">
         <!---->
         <div class="el-input el-input--medium el-input--suffix">
-          <!----><input type="text" readonly="readonly" autocomplete="off" placeholder="Status" class="el-input__inner">
+          <!----><input type="text" readonly="readonly" autocomplete="off" placeholder="状态" class="el-input__inner">
           <!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i
             class="el-select__caret el-input__icon el-icon-arrow-up"
           />
@@ -64,7 +64,7 @@
       <div class="el-select filter-item el-select--medium" style="width: 130px;">
         <!---->
         <div class="el-input el-input--medium el-input--suffix">
-          <!----><input type="text" readonly="readonly" autocomplete="off" placeholder="Owner" class="el-input__inner">
+          <!----><input type="text" readonly="readonly" autocomplete="off" placeholder="创建人" class="el-input__inner">
           <!----><span class="el-input__suffix"><span class="el-input__suffix-inner"><i
             class="el-select__caret el-input__icon el-icon-arrow-up"
           />
@@ -98,17 +98,17 @@
       </div>
       <button type="button" class="el-button filter-item el-button--primary el-button--medium">
         <!----><i class="el-icon-search" /><span>
-          Search
+          搜索
         </span></button> <button
         type="button"
         class="el-button filter-item el-button--primary el-button--medium"
         style="margin-left: 10px;"
       >
         <!----><i class="el-icon-edit" /><span>
-          Add
+          添加
         </span></button> <button type="button" class="el-button filter-item el-button--primary el-button--medium">
         <!----><i class="el-icon-download" /><span>
-          Output
+          导出
         </span></button>
     </div>
     <div
@@ -135,24 +135,24 @@
                 class="el-table_5_column_17  is-center   is-leaf is-sortable"
                 style="cursor: col-resize;"
               >
-                <div class="cell">No<span class="caret-wrapper"><i class="sort-caret ascending" /><i
+                <div class="cell">编号<span class="caret-wrapper"><i class="sort-caret ascending" /><i
                   class="sort-caret descending"
                 /></span></div>
               </th>
               <th colspan="1" rowspan="1" class="el-table_5_column_18  is-center   is-leaf">
-                <div class="cell">Timestamp</div>
+                <div class="cell">创建时间</div>
               </th>
               <th colspan="1" rowspan="1" class="el-table_5_column_19     is-leaf">
-                <div class="cell">Title</div>
+                <div class="cell">名称</div>
               </th>
               <th colspan="1" rowspan="1" class="el-table_5_column_20  is-center   is-leaf">
-                <div class="cell">Owner</div>
+                <div class="cell">创建人</div>
               </th>
               <th colspan="1" rowspan="1" class="el-table_5_column_23   status-col  is-leaf">
-                <div class="cell">Status</div>
+                <div class="cell">状态</div>
               </th>
               <th colspan="1" rowspan="1" class="el-table_5_column_24  is-center small-padding fixed-width  is-leaf">
-                <div class="cell">Action</div>
+                <div class="cell">操作</div>
               </th>
               <th class="gutter" style="width: 0px; display: none;" />
             </tr>
@@ -178,21 +178,21 @@
                 <div class="cell"><span>2018-10-16 11:38</span></div>
               </td>
               <td rowspan="1" colspan="1" class="el-table_5_column_19  ">
-                <div class="cell"><span class="link-type">Test_demo_01</span></div>
+                <div class="cell"><span class="link-type">测试_01</span></div>
               </td>
               <td rowspan="1" colspan="1" class="el-table_5_column_20 is-center ">
-                <div class="cell"><span>Teddy</span></div>
+                <div class="cell"><span>张三</span></div>
               </td>
               <td rowspan="1" colspan="1" class="el-table_5_column_21  status-col">
                 <div class="cell"><span class="el-tag el-tag--danger el-tag--medium">
-                  deleted
+                  待设置
                 </span></div>
               </td>
               <td rowspan="1" colspan="1" class="el-table_5_column_22 is-center small-padding">
                 <div class="cell"><button type="button" class="el-button el-button--primary el-button--mini">
                   <!---->
                   <!----><span>
-                    Edit
+                    编辑
                   </span></button>
                   <!---->
                 </div>
@@ -231,18 +231,18 @@
             style="width: 100%; padding-top: 15px;height:400px;"
           >
             <div class="el-table__header-wrapper">
-              <h3 style="text-align: center">Data Validation&nbsp;&nbsp;<span class="el-tag el-tag--success el-tag--medium">
-                Pass
+              <h3 style="text-align: center">数据完整性验证&nbsp;&nbsp;<span class="el-tag el-tag--success el-tag--medium">
+                正常
               </span></h3>
               <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 100%;height:400px;">
 
                 <thead class="has-gutter">
                   <tr class="">
                     <th colspan="1" rowspan="1" class="     is-leaf">
-                      <div class="cell">Data Qualification</div>
+                      <div class="cell">数据质量</div>
                     </th>
                     <th colspan="1" rowspan="1" class=" is-center   is-leaf">
-                      <div class="cell">Status</div>
+                      <div class="cell">检测结果</div>
                     </th>
                   </tr>
                 </thead>
@@ -256,12 +256,12 @@
                   <tr class="el-table__row">
                     <td rowspan="1" colspan="1" class="  ">
                       <div class="cell">
-                        Tabel header
+                        文件头
                       </div>
                     </td>
                     <td rowspan="1" colspan="1" class="is-center ">
                       <div class="cell"><span class="el-tag el-tag--success el-tag--medium">
-                        Pass
+                        正常
                       </span></div>
                     </td>
                   </tr>
@@ -269,36 +269,36 @@
                   <tr class="el-table__row">
                     <td rowspan="1" colspan="1" class="  ">
                       <div class="cell">
-                        Timestamp Format
+                        时间戳格式
                       </div>
                     </td>
                     <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
                       <div class="cell"><span class="el-tag el-tag--success el-tag--medium">
-                        Pass
+                        正常
                       </span></div>
                     </td>
                   </tr>
                   <tr class="el-table__row">
                     <td rowspan="1" colspan="1" class="  ">
                       <div class="cell">
-                        Single Variable for Loads
+                        变量对应关系
                       </div>
                     </td>
                     <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
                       <div class="cell"><span class="el-tag el-tag--success el-tag--medium">
-                        Pass
+                        正常
                       </span></div>
                     </td>
                   </tr>
                   <tr class="el-table__row">
                     <td rowspan="1" colspan="1" class="  ">
                       <div class="cell">
-                        Without duplicated Timestep
+                        时间戳唯一性
                       </div>
                     </td>
                     <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
                       <div class="cell"><span class="el-tag el-tag--success el-tag--medium">
-                        Pass
+                        正常
                       </span></div>
                     </td>
                   </tr>
@@ -327,16 +327,16 @@
             style="width: 100%; padding-top: 15px;height:400px;"
           >
             <div class="el-table__header-wrapper">
-              <h3 style="text-align: center">Data Properties</h3>
+              <h3 style="text-align: center">基础特性</h3>
               <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 100%;height:400px;">
 
                 <thead class="has-gutter">
                   <tr class="">
                     <th colspan="1" rowspan="1" class="     is-leaf">
-                      <div class="cell">Data Properties</div>
+                      <div class="cell">特性</div>
                     </th>
                     <th colspan="1" rowspan="1" class=" is-center   is-leaf">
-                      <div class="cell">Value</div>
+                      <div class="cell">值</div>
                     </th>
                   </tr>
                 </thead>
@@ -349,7 +349,7 @@
                   <tr class="el-table__row">
                     <td rowspan="1" colspan="1" class="  ">
                       <div class="cell">
-                        Start Timestamp
+                        起始时间戳
                       </div>
                     </td>
                     <td rowspan="1" colspan="1" class="is-center ">
@@ -361,7 +361,7 @@
                   <tr class="el-table__row">
                     <td rowspan="1" colspan="1" class="  ">
                       <div class="cell">
-                        End Timestamp
+                        终止时间戳
                       </div>
                     </td>
                     <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
@@ -373,7 +373,7 @@
                   <tr class="el-table__row">
                     <td rowspan="1" colspan="1" class="  ">
                       <div class="cell">
-                        Time Range
+                        时间跨度
                       </div>
                     </td>
                     <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
@@ -385,7 +385,7 @@
                   <tr class="el-table__row">
                     <td rowspan="1" colspan="1" class="  ">
                       <div class="cell">
-                        Time Step
+                        采样频率
                       </div>
                     </td>
                     <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
@@ -397,7 +397,7 @@
                   <tr class="el-table__row">
                     <td rowspan="1" colspan="1" class="  ">
                       <div class="cell">
-                        Count
+                       数据点数
                       </div>
                     </td>
                     <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
@@ -427,16 +427,16 @@
             style="width: 100%; padding-top: 15px;height:400px;"
           >
             <div class="el-table__header-wrapper">
-              <h3 style="text-align: center">Statistic Features</h3>
+              <h3 style="text-align: center">统计特征</h3>
               <table cellspacing="0" cellpadding="0" border="0" class="el-table__header" style="width: 100%;height:400px;">
 
                 <thead class="has-gutter">
                   <tr class="">
                     <th colspan="1" rowspan="1" class="     is-leaf">
-                      <div class="cell">Features</div>
+                      <div class="cell">指标名称</div>
                     </th>
                     <th colspan="1" rowspan="1" class=" is-center   is-leaf">
-                      <div class="cell">Value</div>
+                      <div class="cell">值</div>
                     </th>
                   </tr>
                 </thead>
@@ -449,7 +449,7 @@
                   <tr class="el-table__row">
                     <td rowspan="1" colspan="1" class="  ">
                       <div class="cell">
-                        Max
+                        最大值
                       </div>
                     </td>
                     <td rowspan="1" colspan="1" class="is-center ">
@@ -461,7 +461,7 @@
                   <tr class="el-table__row">
                     <td rowspan="1" colspan="1" class="  ">
                       <div class="cell">
-                        Min
+                        最小值
                       </div>
                     </td>
                     <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
@@ -473,7 +473,7 @@
                   <tr class="el-table__row">
                     <td rowspan="1" colspan="1" class="  ">
                       <div class="cell">
-                        Mean
+                        均值
                       </div>
                     </td>
                     <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
@@ -485,7 +485,7 @@
                   <tr class="el-table__row">
                     <td rowspan="1" colspan="1" class="  ">
                       <div class="cell">
-                        variance
+                        方差
                       </div>
                     </td>
                     <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
@@ -495,7 +495,7 @@
                   <tr class="el-table__row">
                     <td rowspan="1" colspan="1" class="  ">
                       <div class="cell">
-                        kurtosis
+                        峰态系数
                       </div>
                     </td>
                     <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
@@ -507,7 +507,7 @@
                   <tr class="el-table__row">
                     <td rowspan="1" colspan="1" class="  ">
                       <div class="cell">
-                        skewness
+                       偏态系数
                       </div>
                     </td>
                     <td rowspan="1" colspan="1" class="el-table_1_column_3 is-center ">
@@ -532,19 +532,31 @@
       </el-col>
       <el-col :xs="24" :sm="24" :lg="12">
         <div class="chart-wrapper">
-          <div id="myDiv1" style="width:90%;height:400px;margin:auto;" />
+          <div id="myDiv2" style="width:90%;height:400px;margin:auto;" />
         </div>
       </el-col>
     </el-row>
     <el-row :gutter="32" style="">
       <el-col :xs="24" :sm="24" :lg="12">
         <div class="chart-wrapper">
-          <div id="myDiv2" style="width:90%;height:400px;margin:auto;" />
+          <div id="myDiv1" style="width:90%;height:400px;margin:auto;" />
         </div>
       </el-col>
       <el-col :xs="24" :sm="24" :lg="12">
         <div class="chart-wrapper">
           <div id="myDiv3" style="width:90%;height:400px;margin:auto;" />
+        </div>
+      </el-col>
+    </el-row>
+    <el-row :gutter="32" style="">
+      <el-col :xs="24" :sm="24" :lg="12">
+        <div class="chart-wrapper">
+          <div id="myDiv4" style="width:90%;height:400px;margin:auto;" />
+        </div>
+      </el-col>
+      <el-col :xs="24" :sm="24" :lg="12">
+        <div class="chart-wrapper">
+          <div id="myDiv5" style="width:90%;height:400px;margin:auto;" />
         </div>
       </el-col>
     </el-row>
@@ -607,6 +619,7 @@ export default {
   mounted() {
     this.initPlotlyLineChart()
     this.initPlotlySeaonalChart()
+    this.initAbnormalChart()
   },
   methods: {
 
@@ -638,7 +651,7 @@ export default {
 
       }
       var layout = {
-        title: 'Raw Data Plot'
+        title: '原始数据'
       }
 
       plotly.newPlot(PLOT, [trace], layout)
@@ -657,7 +670,7 @@ export default {
           const trace1 = {
             x: json.x,
             y: json.trend,
-            name: 'Trend',
+            name: '趋势性',
             type: 'scatter'
           }
 
@@ -666,7 +679,7 @@ export default {
             y: json.residual,
             xaxis: 'x2',
             yaxis: 'y2',
-            name: 'Residual',
+            name: '残差',
             type: 'scatter'
           }
 
@@ -675,13 +688,13 @@ export default {
             y: json.seasonal,
             xaxis: 'x3',
             yaxis: 'y3',
-            name: 'Seasonal',
+            name: '周期性',
             type: 'scatter'
           }
 
           const trace4 = {
             x: json.X_histo,
-            name: 'X_histo',
+            name: '直方图',
             type: 'histogram'
           }
 
@@ -689,7 +702,7 @@ export default {
             y: json.kde_gaussan,
             xaxis: 'x2',
             yaxis: 'y2',
-            name: 'kde_gaussan',
+            name: '核密度估计（高斯核）',
             type: 'scatter'
           }
 
@@ -697,13 +710,13 @@ export default {
             y: json.kde_tophat,
             xaxis: 'x2',
             yaxis: 'y2',
-            name: 'kde_tophat',
+            name: '核密度估计（帽顶核）',
             type: 'scatter'
           }
           const data = [trace1, trace2, trace3]
 
           var layout = {
-            title: 'Seasonal',
+            title: '周期稳定性分析',
             grid: {
               rows: 3,
               columns: 1,
@@ -715,7 +728,7 @@ export default {
 
           const data2 = [trace4, trace5, trace6]
           const layout2 = {
-            title: 'Histogramm',
+            title: '采样（真实）密度',
 
             xaxis2: {
               overlaying: 'x',
@@ -743,20 +756,70 @@ export default {
           const trace1 = {
             x: json.log_index,
             y: json.log_diff1,
-            name: 'diff1',
+            name: '一阶',
             type: 'scatter'
           }
           const trace2 = {
             x: json.log_index,
             y: json.log_diff2,
-            name: 'diff2',
+            name: '二阶',
             type: 'scatter'
           }
           const layout = {
-            title: '1st & 2nd Differential'
+            title: '差分稳定性'
           }
           plotly.newPlot('myDiv3', [trace1, trace2], layout)
         }
+      })
+    },
+    initAbnormalChart(){
+        // 载入json数据
+      $.ajax({
+        url: 'http://localhost:9527/step_5_ta_fo_data.json', // json文件位置
+        type: 'GET', // 请求方式为get
+        async: false,
+        dataType: 'json', // 返回数据格式为json
+        success: function(json) { // 请求成功完成后要执行的方法
+          console.log('json data acquired')
+
+          // tableData = json.feature;
+          const trace1 = {
+
+            y: json.KL,
+            name: 'KL',
+            type: 'scatter'
+          }
+
+          const trace2 = {
+            y: json.hurst_series,
+            xaxis: 'x2',
+            yaxis: 'y2',
+            name: 'hurst_series',
+            type: 'scatter'
+          }
+
+          const trace3 = {
+            y: json.wavelet_period,
+            xaxis: 'x3',
+            yaxis: 'y3',
+            name: 'wavelet_period',
+            type: 'scatter'
+          }
+
+          const data = [trace1, trace2, trace3]
+
+          var layout = {
+            title: '特征工程分析',
+            grid: {
+              rows: 3,
+              columns: 1,
+              pattern: 'independent'
+            }
+          }
+
+          plotly.newPlot('myDiv4', data, layout, { showSendToCloud: false }, { responsive: true })
+        }
+
       })
     }
   }
