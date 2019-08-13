@@ -799,10 +799,10 @@ export default {
           }
 
           const trace3 = {
-            y: json.wavelet_period,
+            y: json.sst_value,
             xaxis: 'x3',
             yaxis: 'y3',
-            name: 'wavelet_period',
+            name: 'sst_value',
             type: 'scatter'
           }
 
