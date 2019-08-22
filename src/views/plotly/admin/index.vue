@@ -784,7 +784,6 @@ export default {
 
           // tableData = json.feature;
           const trace1 = {
-
             y: json.KL,
             name: 'KL',
             type: 'scatter'
@@ -806,14 +805,80 @@ export default {
             type: 'scatter'
           }
 
-          const data = [trace1, trace2, trace3]
+          const trace4 = {
+            y: json.sst,
+            xaxis: 'x4',
+            yaxis: 'y4',
+            name: '异常标段',
+            type: 'bar',
+            opacity: 0.3
+          }
+
+          const trace5 = {
+            y: json.raw_value,
+            xaxis: 'x4',
+            yaxis: 'y5',
+            name: 'raw_value',
+            type: 'scatter'
+          }
+
+
+
+          const data = [trace1, trace2, trace3, trace4, trace5]
 
           var layout = {
             title: '特征工程分析',
             grid: {
-              rows: 3,
+              rows: 4,
               columns: 1,
               pattern: 'independent'
+            },
+            xaxis:{
+              showgrid: false,
+              zeroline: false,
+              showline: false,
+              autotick: true,
+              ticks: '',
+              showticklabels: false
+            },
+            xaxis2: {
+              showgrid: false,
+              zeroline: false,
+              showline: false,
+              autotick: true,
+              ticks: '',
+              showticklabels: false
+            },
+            xaxis3: {
+              showgrid: false,
+              zeroline: false,
+              showline: false,
+              autotick: true,
+              ticks: '',
+              showticklabels: false
+            },
+            xaxis4:{
+              showticklabels: true,
+            },
+            yaxis: {
+              domain: [0.8, 1],
+              zeroline: false,
+            },
+            yaxis2: {
+              domain: [0.6, 0.8],
+              zeroline: false,
+            },
+            yaxis3: {
+              domain: [0.4, 0.6],
+              zeroline: false,
+            },
+            yaxis4: {
+              side: 'right',
+              domain: [0, 0.4]
+            },
+            yaxis5: {
+              overlaying: 'y4',
+              side: 'left'
             }
           }
 

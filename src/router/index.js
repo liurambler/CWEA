@@ -183,7 +183,7 @@ export const constantRoutes = [
  * asyncRoutes
  * the routes that need to be dynamically loaded based on user roles
  */
-// export const asyncRoutes = [
+export const asyncRoutes = [
 //   {
 //     path: '/permission',
 //     component: Layout,
@@ -328,42 +328,42 @@ export const constantRoutes = [
 //   //   ]
 //   // },
 
-//   // {
-//   //   path: '/excel',
-//   //   component: Layout,
-//   //   redirect: '/excel/export-excel',
-//   //   name: 'Excel',
-//   //   meta: {
-//   //     title: 'Excel',
-//   //     icon: 'excel'
-//   //   },
-//   //   children: [
-//   //     {
-//   //       path: 'export-excel',
-//   //       component: () => import('@/views/excel/export-excel'),
-//   //       name: 'ExportExcel',
-//   //       meta: { title: 'Export Excel' }
-//   //     },
-//   //     {
-//   //       path: 'export-selected-excel',
-//   //       component: () => import('@/views/excel/select-excel'),
-//   //       name: 'SelectExcel',
-//   //       meta: { title: 'Export Selected' }
-//   //     },
-//   //     {
-//   //       path: 'export-merge-header',
-//   //       component: () => import('@/views/excel/merge-header'),
-//   //       name: 'MergeHeader',
-//   //       meta: { title: 'Merge Header' }
-//   //     },
-//   //     {
-//   //       path: 'upload-excel',
-//   //       component: () => import('@/views/excel/upload-excel'),
-//   //       name: 'UploadExcel',
-//   //       meta: { title: 'Upload Excel' }
-//   //     }
-//   //   ]
-//   // },
+  {
+    path: '/excel',
+    component: Layout,
+    redirect: '/excel/export-excel',
+    name: 'Excel',
+    meta: {
+      title: 'Excel',
+      icon: 'excel'
+    },
+    children: [
+      {
+        path: 'export-excel',
+        component: () => import('@/views/excel/export-excel'),
+        name: 'ExportExcel',
+        meta: { title: 'Export Excel' }
+      },
+      {
+        path: 'export-selected-excel',
+        component: () => import('@/views/excel/select-excel'),
+        name: 'SelectExcel',
+        meta: { title: 'Export Selected' }
+      },
+      {
+        path: 'export-merge-header',
+        component: () => import('@/views/excel/merge-header'),
+        name: 'MergeHeader',
+        meta: { title: 'Merge Header' }
+      },
+      {
+        path: 'upload-excel',
+        component: () => import('@/views/excel/upload-excel'),
+        name: 'UploadExcel',
+        meta: { title: 'Upload Excel' }
+      }
+    ]
+  },
 
 //   // {
 //   //   path: '/zip',
@@ -438,9 +438,9 @@ export const constantRoutes = [
 //   //   ]
 //   // },
 
-//   // 404 page must be placed at the end !!!
-//   { path: '*', redirect: '/404', hidden: true }
-// ]
+  // 404 page must be placed at the end !!!
+  { path: '*', redirect: '/404', hidden: true }
+]
 
 const createRouter = () => new Router({
   // mode: 'history', // require service support
